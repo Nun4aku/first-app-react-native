@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { View, Text, StyleSheet, TextInput, Button, Alert } from "react-native";
+import { THEME } from "../theme";
 
 
 export const AddTodo = ( { onSubmit } ) => {
@@ -31,7 +32,7 @@ export const AddTodo = ( { onSubmit } ) => {
                 autoCorrect = {false}
                 autoCapitalize = 'none'
             />
-           <Button title="Добавить" onPress={pressHandler} color="#ff9802" />
+           <Button title="Добавить" onPress={pressHandler} color={ THEME.ORANGE_COLOR} />
         </View>
     )
 }

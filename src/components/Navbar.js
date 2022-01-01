@@ -1,11 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, SafeAreaView } from "react-native";
 
 export const Navbar = ( {title} ) => {
     return (
-        <View style={style.navbar}>
+        <SafeAreaView style={style.navbar}>
             <Text style={style.text}>{title}</Text>
-        </View>
+        </SafeAreaView>
 
     )
 };
