@@ -9,10 +9,10 @@ export const MainScreen = ( {addTodo, todos, removeTodo, openTodo} ) => {
             <AddTodo onSubmit={addTodo}/>
 
             <FlatList
-            keyExtractor={item => item.id.toString()}
-            data = {todos}
-            renderItem = {({item}) => (
-                <Todo todo={item} onRemove = {removeTodo} oneOpen={openTodo}/>
+                keyExtractor={item => item.id.toString()}
+                data = {todos}
+                renderItem = {({item}) => (
+                    <Todo todo={item} onRemove = {removeTodo} oneOpen={openTodo}/>
                 )}
             />
         </View>

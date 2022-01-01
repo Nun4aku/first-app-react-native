@@ -8,7 +8,11 @@ import { TodoScreen } from './src/screens/TodoScreen';
 export default function App() {
 
   const [todoId, setTodoId] = useState(null)
-  const [todos, setTodos] = useState([])
+  const [todos, setTodos] = useState([
+    {id: '1', title: 'Заметка 1'},
+    {id: '2', title: 'заметка 2'},
+    {id: '3', title: 'Заметка 3'},
+  ])
 
 
   const addTodo = (title) => {
@@ -49,8 +53,6 @@ export default function App() {
       ],
       { cancelable: false }
     );
-
-    
   }
 
   let content = (
