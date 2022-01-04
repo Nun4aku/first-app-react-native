@@ -1,6 +1,7 @@
 import React, {useState} from "react";
-import { View, Text, StyleSheet, TextInput, Button, Alert } from "react-native";
+import { View, Text, StyleSheet, TextInput, Button, Alert, Keyboard} from "react-native";
 import { THEME } from "../theme";
+import { AntDesign } from '@expo/vector-icons'; 
 
 
 export const AddTodo = ( { onSubmit } ) => {
@@ -13,6 +14,7 @@ export const AddTodo = ( { onSubmit } ) => {
         if(value.trim()){
             onSubmit(value)
             setValue('')
+            Keyboard.dismiss()
         }else{
             //error
             Alert.alert('не может быть пустым')
@@ -32,7 +34,10 @@ export const AddTodo = ( { onSubmit } ) => {
                 autoCorrect = {false}
                 autoCapitalize = 'none'
             />
-           <Button title="Добавить" onPress={pressHandler} color={ THEME.ORANGE_COLOR} />
+            <AntDesign.Button style = {style.btn} onPress={pressHandler} name='plussquareo' color="#333" >
+                Добавить
+            </AntDesign.Button>
+           {/*<Button title="Добавить" onPress={pressHandler} color={ THEME.ORANGE_COLOR} />*/}
         </View>
     )
 }
@@ -47,7 +52,7 @@ const style = StyleSheet.create({
         paddingVertical: 20,
     },
     input: {
-        width: '70%',
+        width: '60%',
         borderStyle: 'solid',
         borderWidth: 2,
         borderColor: '#555',
@@ -58,5 +63,8 @@ const style = StyleSheet.create({
         paddingRight: 10,
         backgroundColor: "#fff",
     },
+    btn: {
+        backgroundColor: THEME.ORANGE_COLOR,
+    }
 
 })

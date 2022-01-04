@@ -1,6 +1,7 @@
 import React from "react";
 import { Text, View, StyleSheet, TouchableOpacity} from "react-native";
 
+
 export const Todo = ( {todo, onRemove, oneOpen} ) => {
 
     const longPressHandler = () => {
@@ -15,7 +16,7 @@ export const Todo = ( {todo, onRemove, oneOpen} ) => {
         >
             <View style={style.todo}>
                 {/*<Text> {todo.id} </Text>*/}
-                <Text> {todo.title} </Text>
+                <Text style={style.title}> {todo.title} </Text>
             </View>
         </TouchableOpacity>
         
@@ -32,5 +33,9 @@ const style = StyleSheet.create ({
         borderWidth: 1,
         borderColor: '#eee',
         borderRadius: 5,
-    }
+    },
+    /*
+    title: {
+        fontFamily: 'roboto-bolt',
+    }*/
 })
