@@ -24,17 +24,6 @@ export default function App() {
     {id: '1', title: 'Заметка 1'},
   ])
 
-  /*
-  if (!isReady){
-    return (
-      <AppLoading 
-        startAsync = { loadApplication } 
-        onError = { err => console.log(err) } 
-        onFinish = { () => setIsReady(true) }
-      />
-    )
-  }*/
-
   const addTodo = (title) => {
     const newTodo = {
       id: Date.now().toString(),
